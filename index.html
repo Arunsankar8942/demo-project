@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <!-- <nav class="nav-1" style="display:flex; justify-content:space-between;">
+        <h1>RN Calestial</h1>
+        <div class="div-1">
+            <span><a href="#">HOME</a></span>
+            <span><a href="#">ABOUT US</a></span>
+            <span><a href="#">SERVICES</a></span>
+            <span><a href="#">CONTACT US</a></span>
+            
+        </div>
+    </nav>
+    <section>
+        
+        <div class="pictures">
+            <img src="images\img1.jpg" alt="" class="image1">
+            <img src="images\img2.jpg" alt="" class="image1">
+            <img src="images\img3.jpg" alt="" class="image1">
+        </div>
+        
+    </section> -->
+    <!-- <form action="" id="form-submit">
+        <label for="">user_name</label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="">Qualification</label>
+        <input type="text" id="qualification">
+        <br><br>
+        <label for="">Resume</label>
+        <input type="file" id="resume">
+        <br><br>
+        <button type="submit" id="button">submit</button>
+    </form>
+    <script >
+         document.getElementById('button').addEventListener('submit',details);
+         function details(e){
+            e.preventDefault();
+            var name=document.getElementById("name").value;
+            var qualification=document.getElementById("qualification").value;
+            var resume=document.getElementById("resume").value;
+            console.log(name);
+            console.log(qualification)
+            console.log(resume)
+
+         }
+    </script> -->
+    <form action="" id="form-submit">
+        <label for="name">user_name</label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="qualification">Qualification</label>
+        <input type="text" id="qualification">
+        <br><br>
+        <label for="resume">Resume</label>
+        <input type="file" id="resume">
+        <br><br>
+        <button type="submit" id="button">submit</button>
+    </form>
+    
+    <script>
+        document.getElementById('form-submit').addEventListener('submit', details);
+    
+        function details(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            var name = document.getElementById("name").value;
+            var qualification = document.getElementById("qualification").value;
+            var resume = document.getElementById("resume").files[0];
+            var link=URL.createObjectURL(resume);
+            console.log(link)
+            console.log(name);
+            console.log(qualification);
+            // console.log(resume);
+        }
+    </script>
+    
+</body>
+</html>
